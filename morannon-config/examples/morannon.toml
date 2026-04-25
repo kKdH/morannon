@@ -1,0 +1,29 @@
+[daemon]
+bind-address = "127.0.0.1"
+bind-port = 3019
+
+[daemon.models.model-1]
+provider = "openai"
+upstream-name = "gpt-4o"
+downstream-name = "smart-model"
+
+[daemon.models.model-2]
+provider = "anthropic"
+upstream-name = "claude-haiku-4-5"
+downstream-name = "fast-model"
+
+[daemon.clients.my-client-1]
+key = "local-abc123"
+models = ["model-1", "model-2"]
+
+[daemon.clients.my-client-2]
+key = "local-def456"
+models = ["model-1"]
+
+[daemon.providers.openai]
+api-base = "https://api.openai.com"
+api-key = "XYZ456"
+
+[daemon.providers.anthropic]
+api-base = "https://api.anthropic.com"
+api-key = "ABC123"
