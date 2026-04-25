@@ -14,6 +14,7 @@ members = [
 morannon-config = { path = "morannon-config" }
 
 axum = { version = "0.8.*" }
+clap = { version = "4.*", features = ["derive"] }
 axum-extra = { version = "0.12.*" }
 directories = { version = "6.*" }
 futures = { version = "0.3.*" }
